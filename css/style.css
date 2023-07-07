@@ -1,38 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
 * {
     margin: 0;
     padding: 0;
 }
-
-#navbar {
-    display: flex;
-    align-items: center;
-    position:absolute;
-}
-
-#navbar #logo {
-    margin: 20px 20px;
-}
-
-#navbar #logo img {
-    border-radius: 50%;
-    height: 60px;
-}
-
-#navbar ul {
-    display: flex;
-}
-
-#navbar::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    height: 100%;
+.hero-container{
+    height:600px;
     width: 100%;
-    z-index: -1;
-    opacity: 0.4;
+}
+.hero-container img{
+    display: block;
+    height: 600px;
+    width: 100%;
+} 
+#navbar{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    position: absolute;
+    top: 0; 
+    height: 100px;
+    width: 100%;
+    background-color: black;
 
 }
-
+#navbar .logo img{
+    border-radius: 50%;
+    height: 70px;
+    margin-left: 10px;
+}
+#navbar .logo{
+    margin: 5px;
+    padding: 10px;
+}
+#navbar ul{
+    display: flex;
+}
 ul li {
     list-style: none;
     font-size: 20px;
@@ -50,77 +52,76 @@ ul li a:hover {
     color: black;
     background-color: white;
 }
-
 /* home-section */
-.home {
+.home{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 350px;
-    border: 2px solid green;
-    position: relative;
+    position: absolute;
+    top: 200px;
+    left: 269px;
 }
- .home img{
-    height: 570px;
-    width: 100%;
-} 
-.home h1 {
-    color: white;
-    text-align: center;
-
+.home p{
+   color:white;
+   font-family: 'Ubuntu', sans-serif;
 }
-
-.home p {
-    color: white;
-    text-align: center;
-    font-size: 15px;
-    padding: 5px;
-    font-weight: bold;
-}
-
-/* utility-classes */
-.h-primary {
+.home h1{
     font-size: 50px;
-    padding: 15px;
+    color: aliceblue;
+    margin-bottom:10px;
 }
-.h-secondary{
-    font-size: 25px;
-}
-
-.btn {
-    padding: 5px 20px;
-    border: 2px solid white;
-    background-color:black;
-    margin: 20px;
-    cursor: pointer;
-    color: white;
-    border-radius: 25px;
+/* utility-classes */
+.h-primary{
+    font-size: 35px;
 }
 .center{
     text-align: center;
 }
+.btn {
+    padding: 5px 20px;
+    border: 2px solid white;
+    background-color:black;
+    margin: 25px;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+}
 /* services-section */
+#service-container h1{
+    margin-top: 25px;
+}
 #service{
     margin: 30px;
     display: flex;
 }
 #service .box{
     margin: 10px;
-    border: 2px solid brown;
-    padding: 10px;
-    border-radius: 25px;
+    border: 2px solid rgb(211, 190, 190);
+    padding: 50px;
+    margin: 2px 55px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    background-color: rgb(241, 239, 239);
 }
 #service .box img{
     height: 160px;
     display: block;
     margin: auto;
+    padding-bottom: 10px;
+}
+#service .box p{
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 10px;
 }
 /* client-section */
 #client-section{
-    height: 350px;
+    height: 400px;
     background: url(../images/clientbackground.jpg) no-repeat center center/cover;
-    opacity: 0.9;
 }
 .clients{
     display: flex;
@@ -129,9 +130,10 @@ ul li a:hover {
 }
 .client-items img{
     height: 150px;
+    opacity: 0.7;
 }
 .client-items{
-    padding: 30px;
+    padding: 20px;
     margin: 5px;
 }
 #client-section::before{
@@ -142,6 +144,9 @@ ul li a:hover {
     z-index: -1;
     opacity: 0.5;
 }
+#client-section h1{
+    padding-top: 25px;
+}
 /* contact-section */
 #contact{
     display: flex;
@@ -149,16 +154,40 @@ ul li a:hover {
     justify-content: center;
     align-items: center;
     height: 400 px;
-    background:  url(../images/contact.jpg) no-repeat center center/cover;
-    opacity: 0.9;
+    background:url(/images/contact3.jpg) no-repeat center center/cover;
+}
+#contact h1{
+    padding: 20px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding:5px;
+    border-radius: 9px;
+    font-size:20px;
+    background-color: rgb(226, 233, 233);
+} 
+
+#contact-box form{
+    width:100%;
+}
+
+#contact-box label{
+   font-size: 20px;
+
 }
 footer{
     background-color: black;
     color: white;
     padding: 10px 20px;
 }
-#contact-box input,
-#contact-box textarea{
-    width: 100%;
+ 
 
-}
+   input{
+    color: white;
+    margin-top: 5px;
+   
+ }
+  textarea {
+    margin-top: 5px;
+ }
